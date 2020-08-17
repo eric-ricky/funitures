@@ -15,6 +15,11 @@ $(document).ready(function(){
         } // End if
     });
 
+    // navbar button
+    $('.navbar-toggler').click(function() {
+        $('.navbar-toggler').toggleClass("close");
+    });
+
 
     // slide in
     $(window).scroll(function() {

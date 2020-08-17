@@ -65,9 +65,13 @@ ul {
 }
 .btn {
     font-size: 2rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     border-radius: 0.5rem;
     transition: var(--mainTransition);
+}
+.btn:hover {
+    background-color: transparent !important;
+    color: black;
 }
 .logo-small {
     text-align: center;
@@ -78,7 +82,7 @@ ul {
 
 /* ------------ Navigation ---------- */
 .navbar {
-    padding: 1rem;
+    padding: 1rem 0;
     border-radius: 0;
     transition: var(--mainTransition);
 }
@@ -86,7 +90,7 @@ ul {
     background: transparent !important;
 }
 .navbar-reduce {
-    padding: 2.3rem 2rem !important;
+    padding: 2.3rem auto !important;
 }
 .navbar .navbar-brand {
     font-size: 2.5rem;
@@ -109,6 +113,28 @@ ul {
 }
 .navbar .nav-link:hover, .nav-link.active {
     color: #15f501 !important;
+}
+.navbar-toggler {
+    outline: none;
+    border: none;
+}
+.navbar-toggler .btn-line {
+    width: 3rem;
+    height: .3rem;
+    background-color: #15f501 !important;
+    margin: 0 0 .5rem 0;
+    transition: all 1000ms;
+}
+.navbar-toggler.close { 
+    transform: rotate(180deg);
+    margin-right: 4rem;
+}
+.navbar-toggler.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.navbar-toggler.close .btn-line:nth-child(2) { opacity: 0;}
+.navbar-toggler.close .btn-line:nth-child(3) { 
+    transform: rotate(-45deg) translate(7px, -5px);
 }
 /* ------------ end of navigation ---------- */
 
@@ -140,6 +166,15 @@ ul {
 .jumbotron .container div {
     margin-top: 3rem;
 }
+.jumbotron .container .btn-show {
+    border: 2px solid rgb(255, 172, 17);
+    outline: none;
+    background-color: orange;
+    font-weight: 500;
+}
+.jumbotron .container .btn-show:hover {
+    background-color: transparent;
+}
 /* ------------ end of showcase ---------- */
 
 /* MAIN CONTENT */
@@ -155,6 +190,10 @@ ul {
     font-size: 2.1rem;
     font-weight: 700;
     margin: 1.5rem 0;
+}
+.btn-about {
+    border: 2px solid rgba(3, 127, 250, 0.467);
+    background-color: rgba(3, 127, 250, 0.467);
 }
 @media only screen and (max-width: 768px) {
     .section1 .row .col-md-8 {
